@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    padding-top: 35px;
+    color: #af9ec7;
+}
+body {
+    background-image: 
+    url(https://img.freepik.com/premium-vector/hands-playing-rock-paper-scissors-game-flat-design-style-vector-illustration_540284-598.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gameDiv {
+    background-color: rgb(228, 243, 243);
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    height: 575px; width: 800px;
+    margin: 200px 440px;
+}
+.resultDiv p {
+    color: #7d2ae8;
+}
+.resultDiv {
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 65px 210px;
+}
+.gameDiv.start .userResult {
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+.gameDiv.start .cpuResult {
+    animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake {
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+.resultDiv img {
+    height: 140px; width: 120px;
+}
+.userResult img {
+    transform: rotate(90deg);
+}
+.cpuResult img {
+    transform: rotate(-90deg) rotateY(180deg);
+}
+.result {
+    text-align: center;
+    font-size: 25px;
+    color: #7d2ae8;
+}
+.optionImages img {
+    height: 60px; width: 50px;
+}
+.optionImages {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 45px 260px;
+}
+.gameDiv.start .optionImages {
+    pointer-events: none;
+  }
+.userOption {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.userOption:hover {
+    opacity: 1;
+}
+.userOption.active {
+    opacity: 1;
+}
+.optionImages p {
+    color: #7d2ae8;
+    margin-top: 5px;
+    pointer-events: none;
+}
